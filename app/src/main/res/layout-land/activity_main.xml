@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="org.driven_by_data.scorekeeper.scorekeeperfootball.MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="@string/header" />
+
+        <Button
+            android:id="@+id/button_start"
+            tools:layout_editor_absoluteX="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_start" />
+
+        <TextView
+            android:id="@+id/timer"
+            style="@style/timer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/timer" />
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_reset" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:layout_margin="4dp"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:minHeight="368dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/team1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_goal_team1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_goal_default" />
+
+            <TextView
+                android:id="@+id/score_team1"
+                style="@style/score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/score_default" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/header_team1"
+                    style="@style/table_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/team1_default" />
+
+                <Button
+                    android:id="@+id/edit_team1"
+                    style="@style/hidden_button"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_toEndOf="@id/header_team1"
+                    android:layout_toRightOf="@id/header_team1"
+                    android:gravity="center_vertical"
+                    android:text="@string/fa_icon_pencil" />
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <ListView
+                    android:id="@+id/goal_list_team1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </ListView>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/team2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_goal_team2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_goal_default" />
+
+
+            <TextView
+                android:id="@+id/score_team2"
+                style="@style/score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/score_default" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/header_team2"
+                    style="@style/table_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/team2_default" />
+
+                <Button
+                    android:id="@+id/edit_team2"
+                    style="@style/hidden_button"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_toEndOf="@id/header_team2"
+                    android:layout_toRightOf="@id/header_team2"
+                    android:gravity="center_vertical"
+                    android:text="@string/fa_icon_pencil" />
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <ListView
+                    android:id="@+id/goal_list_team2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </ListView>
+
+            </ScrollView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

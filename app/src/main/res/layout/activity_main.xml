@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.driven_by_data.scorekeeper.scorekeeperfootball.MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/button_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/timer"
+        style="@style/timer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/timer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_start" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/button_reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="368dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer">
+
+        <LinearLayout
+            android:id="@+id/team1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_goal_team1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_goal_default" />
+
+            <TextView
+                android:id="@+id/score_team1"
+                style="@style/score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/score_default" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/header_team1"
+                    style="@style/table_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/team1_default" />
+
+                <Button
+                    android:id="@+id/edit_team1"
+                    style="@style/hidden_button"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_toEndOf="@id/header_team1"
+                    android:layout_toRightOf="@id/header_team1"
+                    android:gravity="center_vertical"
+                    android:text="@string/fa_icon_pencil" />
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <ListView
+                    android:id="@+id/goal_list_team1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </ListView>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/team2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_goal_team2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_goal_default" />
+
+
+            <TextView
+                android:id="@+id/score_team2"
+                style="@style/score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/score_default" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/header_team2"
+                    style="@style/table_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/team2_default" />
+
+                <Button
+                    android:id="@+id/edit_team2"
+                    style="@style/hidden_button"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_toEndOf="@id/header_team2"
+                    android:layout_toRightOf="@id/header_team2"
+                    android:gravity="center_vertical"
+                    android:text="@string/fa_icon_pencil" />
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <ListView
+                    android:id="@+id/goal_list_team2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </ListView>
+
+            </ScrollView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

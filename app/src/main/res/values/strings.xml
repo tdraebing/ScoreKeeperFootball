@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">ScoreKeeperFootball</string>
+    <string name="header">Football Scores</string>
+    <string name="button_start">Start Game</string>
+    <string name="button_pause">Pause Game</string>
+    <string name="button_resume">Resume Game</string>
+    <string name="button_reset">Reset</string>
+    <string name="button_goal_default">Goal</string>
+    <string name="timer">0:00</string>
+
+
+    <string name="team1_default">Team 1</string>
+    <string name="team2_default">Team 2</string>
+    <string name="score_default">0</string>
+
+    <string name="fa_icon_pencil">&#xf044;</string>
+
+    <string name="goal_dialog_header">GOOOAAAALLLL!!!</string>
+    <string name="goal_dialog_edit_label">Which player scored?</string>
+    <string name="goal_dialog_edit_default">Player XY</string>
+
+    <string name="team_rename_dialog_header">Rename Team</string>
+    <string name="team_rename_edit_label">How is the team called?</string>
+    <string name="team_rename_edit_default">Team XY</string>
+
+    <string name="endgame_message">90 min and thus the game is over!</string>
+    <string name="halftime_message">45 min are over! Half time!</string>
+    <string name="reset_message">Do you really want to reset the data?</string>
+</resources>
